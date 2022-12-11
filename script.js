@@ -1,19 +1,82 @@
 // кнопки 1 и 2
+const btnOne = document.getElementById('btn-one');
+const btnTwo = document.getElementById('btn-two');
+const btnThree = document.getElementById('btn-three');
+
 const btnOn = document.getElementById('btn-on');
 const btnOff = document.getElementById('btn-off');
 const image = document.querySelector('.background-img');
 
+btnOne.addEventListener('click', function () {
+    if (!btnOne.classList.contains('slide')) {
+        btnOne.classList.add('slide');
+        image.src = "images/1.jpg";
+    }
+    else if (btnTwo.classList.contains('slide') &&
+        !btnThree.classList.contains('slide')) {
+        image.src = "images/2.jpg";
+    }
+    else if (btnThree.classList.contains('slide') &&
+        btnTwo.classList.contains('slide') &&
+        !tumblr.classList.contains('power-on')) {
+        image.src = "images/3.jpg";
+
+    }
+    else if (btnOne.classList.contains('slide') &&
+        btnTwo.classList.contains('slide') &&
+        btnThree.classList.contains('slide') &&
+        tumblr.classList.contains('power-on')) {
+        image.src = "images/on.jpg"
+    }
+
+    else {
+        btnOne.classList.remove("slide");
+        image.src = "images/0.jpg";
+    }
+});
+
+btnTwo.addEventListener('click', function () {
+    if (!btnTwo.classList.contains('slide') &&
+        btnOne.classList.contains('slide')) {
+        btnTwo.classList.add('slide');
+        image.src = "images/2.jpg";
+    }
+    else if (
+        btnOne.classList.contains('slide') &&
+        !btnThree.classList.contains('slide')) {
+        btnTwo.classList.remove("slide");
+        image.src = "images/1.jpg";
+    }
+});
+
+btnThree.addEventListener('click', function () {
+    if (!btnThree.classList.contains('slide') &&
+        btnTwo.classList.contains('slide') &&
+        btnOne.classList.contains('slide')) {
+        btnThree.classList.add('slide');
+        image.src = "images/3.jpg";
+
+    } else if (
+        btnOne.classList.contains('slide') &&
+        btnTwo.classList.contains('slide') &&
+        !tumblr.classList.contains('power-on')) {
+        btnThree.classList.remove("slide");
+        image.src = "images/2.jpg";
+    }
+});
+
 btnOn.addEventListener('click', function () {
-    image.src = "images/on.jpg";
-    tumblr.classList.add('power-on');
-    // amper.classList.remove('amper-hide');
+    if (btnThree.classList.contains('slide')) {
+        image.src = "images/on.jpg";
+        tumblr.classList.add('power-on');
+    }
 });
 
 btnOff.addEventListener('click', function () {
-    if (tumblr.className.includes(downClass)) {
-        image.src = "images/off.jpg";
+    if (tumblr.className.includes(downClass) &&
+        btnThree.classList.contains('slide')) {
+        image.src = "images/3.jpg";
         tumblr.classList.remove('power-on');
-        // amper.classList.add('amper-hide');
     };
 });
 
@@ -436,4 +499,3 @@ function arrCountBlack() {
 
     };
 };
-
