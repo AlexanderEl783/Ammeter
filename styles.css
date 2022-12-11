@@ -71,7 +71,6 @@ body {
   cursor: pointer;
   transition: .2s ease;
   display:flex;
-  position:absolute;
   justify-content:center;
   align-items:center;
 }
@@ -227,4 +226,64 @@ body {
 
 .amper-hide {
   opacity: 0;
+}
+
+
+.switch-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 14px;
+  display: flex;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  transition: all 0.3s linear;
+  background-color: var(--btn-gray);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.switch-btn span {
+  display: inline-block;
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: var(--btn-gray);
+}
+
+.switch {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(83, 83, 83);
+  border-radius: 0.5rem;
+  margin: 0;
+  display: block;
+  transition: all 0.1s linear;
+}
+
+.slide .switch {
+  left: 50%;
+}
+
+#btn-one {
+  top: 380px;
+  left: 810px;
+}
+
+#btn-two {
+  top: 380px;
+  left: 600px;
+  z-index: 99;
+}
+
+#btn-three {
+  top: 340px;
+  left: 380px;
+}
+
+.switch:active {
+  transform: translateY(0.5px);
 }
