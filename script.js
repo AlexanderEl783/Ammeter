@@ -17,8 +17,9 @@ btnLaNull.addEventListener('click', function () {
         btnLaNull.classList.remove('slide');
     }
     else {
-        // valueThree.innerHTML = "0.00";
         btnLaNull.classList.add('slide');
+        btnLbNull.classList.remove('slide');
+        btnLcNull.classList.remove('slide');
     }
     startAmper();
     arrCount();
@@ -26,6 +27,7 @@ btnLaNull.addEventListener('click', function () {
     valueLaNull();
     valueLbNull();
     valueLcNull();
+    vToValue();
 }
 );
 
@@ -34,7 +36,6 @@ function valueLaNull() {
         valueThree.innerHTML = "0.00";
     };
 };
-// valueLaNull();
 
 // кнопка обнуления lb
 btnLbNull.addEventListener('click', function () {
@@ -44,6 +45,8 @@ btnLbNull.addEventListener('click', function () {
     else {
         // valueFour.innerHTML = "0.00";
         btnLbNull.classList.add('slide');
+        btnLaNull.classList.remove('slide');
+        btnLcNull.classList.remove('slide');
     }
     startAmper();
     arrCount();
@@ -51,7 +54,7 @@ btnLbNull.addEventListener('click', function () {
     valueLaNull();
     valueLbNull();
     valueLcNull();
-
+    vToValue();
 }
 );
 
@@ -60,7 +63,6 @@ function valueLbNull() {
         valueFour.innerHTML = "0.00";
     };
 };
-// valueLbNull();
 
 // кнопка обнуления lc
 btnLcNull.addEventListener('click', function () {
@@ -68,8 +70,9 @@ btnLcNull.addEventListener('click', function () {
         btnLcNull.classList.remove('slide');
     }
     else {
-        // valueFive.innerHTML = "0.00";
         btnLcNull.classList.add('slide');
+        btnLaNull.classList.remove('slide');
+        btnLbNull.classList.remove('slide');
     }
     startAmper();
     arrCount();
@@ -77,7 +80,7 @@ btnLcNull.addEventListener('click', function () {
     valueLaNull();
     valueLbNull();
     valueLcNull();
-
+    vToValue();
 }
 );
 
@@ -248,8 +251,6 @@ bOneOne.addEventListener('click', function () {
         lOneThree.classList.add('hide-light');
         lOneFour.classList.add('hide-light');
         lOneFive.classList.add('hide-light');
-
-
     }
     startAmper();
     arrCount();
@@ -689,6 +690,8 @@ redBtnC.addEventListener('click', function () {
     valueLaNull();
     valueLbNull();
     valueLcNull();
+    vToValue();
+
 });
 
 // black cable
@@ -717,6 +720,7 @@ blackBtnA.addEventListener('click', function () {
     valueLaNull();
     valueLbNull();
     valueLcNull();
+    vToValue();
 });
 
 blackBtnB.addEventListener('click', function () {
@@ -736,6 +740,7 @@ blackBtnB.addEventListener('click', function () {
     valueLaNull();
     valueLbNull();
     valueLcNull();
+    vToValue();
 });
 
 blackBtnC.addEventListener('click', function () {
@@ -756,6 +761,7 @@ blackBtnC.addEventListener('click', function () {
     valueLaNull();
     valueLbNull();
     valueLcNull();
+    vToValue();
 
 });
 
@@ -777,6 +783,10 @@ function plusLc() {
     }
 };
 
+// function nullToV {
+//     if
+// }
+
 function hideAllCables() {
     blackcableA.classList.add('hide-cable');
     blackcableB.classList.add('hide-cable');
@@ -793,3 +803,61 @@ function reduceW() {
         valueTwo.innerHTML = "0.00";
     }
 }
+
+function vToValue() {
+    if (btnLaNull.classList.contains('slide')) {
+        if (!redcableC.classList.contains('hide-cable') && !blackcableA.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(53).toFixed(2);
+        }
+
+        else if (!redcableC.classList.contains('hide-cable') && !blackcableB.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(177).toFixed(2);
+
+        }
+
+        else if (!redcableC.classList.contains('hide-cable') && !blackcableC.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(232).toFixed(2);
+        }
+    }
+
+    else if (btnLbNull.classList.contains('slide')) {
+        if (!redcableC.classList.contains('hide-cable') && !blackcableA.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(54).toFixed(2);
+        }
+
+        else if (!redcableC.classList.contains('hide-cable') && !blackcableB.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(178).toFixed(2);
+
+        }
+
+        else if (!redcableC.classList.contains('hide-cable') && !blackcableC.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(233).toFixed(2);
+        }
+    }
+
+    else if (btnLcNull.classList.contains('slide')) {
+        if (!redcableC.classList.contains('hide-cable') && !blackcableA.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(55).toFixed(2);
+        }
+
+        else if (!redcableC.classList.contains('hide-cable') && !blackcableB.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(178).toFixed(2);
+
+        }
+
+        else if (!redcableC.classList.contains('hide-cable') && !blackcableC.classList.contains('hide-cable')) {
+            valueZero.innerHTML = Number(234).toFixed(2);
+        }
+    }
+
+    else {
+        startAmper();
+        arrCount();
+        arrCountBlack();
+        valueLaNull();
+        valueLbNull();
+        valueLcNull();
+        reduceW();
+        plusLc();
+    }
+};
