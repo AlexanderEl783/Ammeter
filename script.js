@@ -6,6 +6,87 @@ const btnThree = document.getElementById('btn-three');
 const btnOn = document.getElementById('btn-on');
 const btnOff = document.getElementById('btn-off');
 const image = document.querySelector('.background-img');
+const btnLaNull = document.getElementById('la-null');
+const btnLbNull = document.getElementById('lb-null');
+const btnLcNull = document.getElementById('lc-null');
+
+
+// кнопка обнуления la
+btnLaNull.addEventListener('click', function () {
+    if (btnLaNull.classList.contains('slide')) {
+        btnLaNull.classList.remove('slide');
+    }
+    else {
+        // valueThree.innerHTML = "0.00";
+        btnLaNull.classList.add('slide');
+    }
+    startAmper();
+    arrCount();
+    arrCountBlack()
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+}
+);
+
+function valueLaNull() {
+    if (btnLaNull.classList.contains('slide')) {
+        valueThree.innerHTML = "0.00";
+    };
+};
+// valueLaNull();
+
+// кнопка обнуления lb
+btnLbNull.addEventListener('click', function () {
+    if (btnLbNull.classList.contains('slide')) {
+        btnLbNull.classList.remove('slide');
+    }
+    else {
+        // valueFour.innerHTML = "0.00";
+        btnLbNull.classList.add('slide');
+    }
+    startAmper();
+    arrCount();
+    arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+
+}
+);
+
+function valueLbNull() {
+    if (btnLbNull.classList.contains('slide')) {
+        valueFour.innerHTML = "0.00";
+    };
+};
+// valueLbNull();
+
+// кнопка обнуления lc
+btnLcNull.addEventListener('click', function () {
+    if (btnLcNull.classList.contains('slide')) {
+        btnLcNull.classList.remove('slide');
+    }
+    else {
+        // valueFive.innerHTML = "0.00";
+        btnLcNull.classList.add('slide');
+    }
+    startAmper();
+    arrCount();
+    arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+
+}
+);
+
+function valueLcNull() {
+    if (btnLcNull.classList.contains('slide')) {
+        valueFive.innerHTML = "0.00";
+    };
+};
+// valueLcNull();
 
 btnOne.addEventListener('click', function () {
     if (!btnOne.classList.contains('slide')) {
@@ -113,6 +194,10 @@ tumblr.addEventListener('click', function () {
         else {
             tumblr.className = tumblr.className.replace(upClass, downClass);
             amper.classList.add('amper-hide');
+            blackcableA.classList.add('hide-cable');
+            blackcableB.classList.add('hide-cable');
+            blackcableC.classList.add('hide-cable');
+            redcableC.classList.add('hide-cable');
         };
         checkboxesLight.classList.toggle('show-lights');
     };
@@ -163,10 +248,17 @@ bOneOne.addEventListener('click', function () {
         lOneThree.classList.add('hide-light');
         lOneFour.classList.add('hide-light');
         lOneFive.classList.add('hide-light');
+
+
     }
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bOneTwo.addEventListener('click', function () {
     if (lOneOne.className.includes('hide-light') ||
@@ -184,6 +276,11 @@ bOneTwo.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bOneThree.addEventListener('click', function () {
     if (lOneOne.className.includes('hide-light') ||
@@ -202,6 +299,11 @@ bOneThree.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bOneFour.addEventListener('click', function () {
     if (lOneOne.className.includes('hide-light') ||
@@ -221,6 +323,11 @@ bOneFour.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bOneFive.addEventListener('click', function () {
     if (lOneOne.className.includes('hide-light') ||
@@ -228,6 +335,7 @@ bOneFive.addEventListener('click', function () {
         lOneThree.className.includes('hide-light') ||
         lOneFour.className.includes('hide-light') ||
         lOneFive.className.includes('hide-light')
+
     ) {
         lOneOne.classList.remove('hide-light');
         lOneTwo.classList.remove('hide-light');
@@ -241,6 +349,11 @@ bOneFive.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 
 // 2 ряд
@@ -259,6 +372,11 @@ bTwoOne.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bTwoTwo.addEventListener('click', function () {
     if (lTwoOne.className.includes('hide-light') ||
@@ -276,6 +394,11 @@ bTwoTwo.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bTwoThree.addEventListener('click', function () {
     if (lTwoOne.className.includes('hide-light') ||
@@ -294,6 +417,11 @@ bTwoThree.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bTwoFour.addEventListener('click', function () {
     if (lTwoOne.className.includes('hide-light') ||
@@ -313,6 +441,11 @@ bTwoFour.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bTwoFive.addEventListener('click', function () {
     if (lTwoOne.className.includes('hide-light') ||
@@ -333,6 +466,11 @@ bTwoFive.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 
 // 3 ряд
@@ -351,6 +489,11 @@ bThreeOne.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bThreeTwo.addEventListener('click', function () {
     if (lThreeOne.className.includes('hide-light') ||
@@ -368,6 +511,11 @@ bThreeTwo.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bThreeThree.addEventListener('click', function () {
     if (lThreeOne.className.includes('hide-light') ||
@@ -386,6 +534,11 @@ bThreeThree.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bThreeFour.addEventListener('click', function () {
     if (lThreeOne.className.includes('hide-light') ||
@@ -405,6 +558,11 @@ bThreeFour.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 bThreeFive.addEventListener('click', function () {
     if (lThreeOne.className.includes('hide-light') ||
@@ -425,6 +583,11 @@ bThreeFive.addEventListener('click', function () {
     startAmper();
     arrCount();
     arrCountBlack();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+    reduceW();
+    plusLc();
 });
 
 // амперметры
@@ -451,15 +614,19 @@ const valueEight = document.getElementById('value8');
 const valueZero = document.getElementById('value0');
 
 function startAmper() {
-    valueZero.innerHTML = "1.40";
+    valueZero.innerHTML = "0.00";
     valueOne.innerHTML = "1.40";
-    valueTwo.innerHTML = "0.00";
+    valueTwo.innerHTML = "12.30";
     valueThree.innerHTML = "0.90";
     valueFour.innerHTML = "0.90";
     valueFive.innerHTML = "0.30";
     valueSix.innerHTML = "0.35";
     valueSeven.innerHTML = "0.36";
     valueEight.innerHTML = "0.36";
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+
 };
 
 function offAmper() {
@@ -478,6 +645,7 @@ const arrLight = [lOneOne, lOneTwo, lOneThree, lOneFour, lOneFive, lTwoOne, lTwo
 const arrYellow = [valueTwo, valueThree, valueFour, valueFive, valueSix, valueSeven, valueEight];
 
 function arrCount() {
+
     let i;
     for (i = 0; i < arrLight.length; i++) {
         if (arrLight[i].className.includes('hide-light')) {
@@ -487,6 +655,7 @@ function arrCount() {
             };
         };
     };
+    reduceW();
 };
 
 function arrCountBlack() {
@@ -494,8 +663,133 @@ function arrCountBlack() {
     for (i = 0; i < arrLight.length; i++) {
         if (arrLight[i].className.includes('hide-light')) {
             valueOne.innerHTML = (Number(valueOne.innerHTML) + Number(0.1)).toFixed(2);
-            valueZero.innerHTML = (Number(valueZero.innerHTML) + Number(0.1)).toFixed(2);
         };
+    };
+    reduceW();
+
+};
+
+// red cable
+const redBtnC = document.getElementById('red-c');
+const redcableC = document.getElementById('red-cable-c');
+
+redBtnC.addEventListener('click', function () {
+    if (redcableC.classList.contains('hide-cable') && tumblr.classList.contains('power-on')) {
+        redcableC.classList.remove('hide-cable');
+    }
+    else {
+        redcableC.classList.add('hide-cable');
+        startAmper();
+        arrCount();
+        arrCountBlack();
+
+    }
+    plusLc();
+    reduceW();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+});
+
+// black cable
+const blackBtnA = document.getElementById('black-a');
+const blackBtnB = document.getElementById('black-b');
+const blackBtnC = document.getElementById('black-c');
+const blackcableA = document.getElementById('black-cable-a');
+const blackcableB = document.getElementById('black-cable-b');
+const blackcableC = document.getElementById('black-cable-c');
+
+blackBtnA.addEventListener('click', function () {
+    if (blackcableA.classList.contains('hide-cable') && tumblr.classList.contains('power-on')) {
+        blackcableA.classList.remove('hide-cable');
+        blackcableB.classList.add('hide-cable');
+        blackcableC.classList.add('hide-cable');
+    }
+    else {
+        blackcableA.classList.add('hide-cable');
+        startAmper();
+        arrCount();
+        arrCountBlack();
+
+    }
+    plusLc();
+    reduceW();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+});
+
+blackBtnB.addEventListener('click', function () {
+    if (blackcableB.classList.contains('hide-cable') && tumblr.classList.contains('power-on')) {
+        blackcableB.classList.remove('hide-cable');
+        blackcableA.classList.add('hide-cable');
+        blackcableC.classList.add('hide-cable');
+    }
+    else {
+        blackcableB.classList.add('hide-cable');
+        startAmper();
+        arrCount();
+        arrCountBlack();
+    }
+    plusLc();
+    reduceW();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+});
+
+blackBtnC.addEventListener('click', function () {
+    if (blackcableC.classList.contains('hide-cable') && tumblr.classList.contains('power-on')) {
+        blackcableC.classList.remove('hide-cable');
+        blackcableB.classList.add('hide-cable');
+        blackcableA.classList.add('hide-cable');
+    }
+    else {
+        blackcableC.classList.add('hide-cable');
+        startAmper();
+        arrCount();
+        arrCountBlack();
 
     };
+    plusLc();
+    reduceW();
+    valueLaNull();
+    valueLbNull();
+    valueLcNull();
+
+});
+
+function plusLc() {
+    if (!redcableC.classList.contains('hide-cable') && !blackcableC.classList.contains('hide-cable')) {
+        valueZero.innerHTML = Number(233).toFixed(2);
+    }
+
+    else if (!redcableC.classList.contains('hide-cable') && !blackcableB.classList.contains('hide-cable')) {
+        valueZero.innerHTML = Number(231).toFixed(2);
+    }
+
+    else if (!redcableC.classList.contains('hide-cable') && !blackcableA.classList.contains('hide-cable')) {
+        valueZero.innerHTML = Number(229).toFixed(2);
+    }
+
+    else {
+        valueZero.innerHTML = "0.00";
+    }
 };
+
+function hideAllCables() {
+    blackcableA.classList.add('hide-cable');
+    blackcableB.classList.add('hide-cable');
+    blackcableC.classList.add('hide-cable');
+    redcableC.classList.add('hide-cable');
+};
+
+function reduceW() {
+    if (!redcableC.classList.contains('hide-cable') && !blackcableA.classList.contains('hide-cable') ||
+        !redcableC.classList.contains('hide-cable') && !blackcableB.classList.contains('hide-cable') ||
+        !redcableC.classList.contains('hide-cable') && !blackcableC.classList.contains('hide-cable')
+    ) {
+        valueOne.innerHTML = "0.00";
+        valueTwo.innerHTML = "0.00";
+    }
+}

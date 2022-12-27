@@ -92,32 +92,73 @@
     <div class="amper-div amper-hide">
       <div class="ampermetr" id="amper0">
         <p class="value black" id="value0">0.00</p>
+        <p class="name-under-ampermetr">V</p>
       </div>
       <div class="ampermetr" id="amper1">
         <p class="value black" id="value1">0.00</p>
+        <p class="name-under-ampermetr">W1</p>
       </div>
       <div class="ampermetr" id="amper2">
         <p class="value yellow" id="value2">0.00</p>
+        <p class="name-under-ampermetr">W2</p>
       </div>
       <div class="ampermetr" id="amper3">
         <p class="value yellow" id="value3">0.00</p>
+        <p class="name-under-ampermetr">la</p>
       </div>
       <div class="ampermetr" id="amper4">
         <p class="value yellow" id="value4">0.00</p>
+        <p class="name-under-ampermetr">lb</p>
       </div>
       <div class="ampermetr" id="amper5">
         <p class="value yellow" id="value5">0.00</p>
+        <p class="name-under-ampermetr">lc</p>
       </div>
       <div class="ampermetr" id="amper6">
         <p class="value yellow" id="value6">0.00</p>
+        <p class="name-under-ampermetr">lab</p>
       </div>
       <div class="ampermetr" id="amper7">
         <p class="value yellow" id="value7">0.00</p>
+        <p class="name-under-ampermetr">lbc</p>
       </div>
       <div class="ampermetr" id="amper8">
         <p class="value yellow" id="value8">0.00</p>
+        <p class="name-under-ampermetr">lca</p>
       </div>
     </div>
+    <!-- чекбокс обнуления -->
+      <button class="switch-btn" id="la-null">
+        <span></span>
+        <span></span>
+        <span class="switch">la</span>
+      </button>
+      <button class="switch-btn" id="lb-null">
+        <span></span>
+        <span></span>
+        <span class="switch">lb</span>
+      </button>
+      <button class="switch-btn" id="lc-null">
+        <span></span>
+        <span></span>
+        <span class="switch">lc</span>
+      </button>
+    <!-- кнопки под красный провод  -->
+    <div class="red-btn-container">
+      <div class="btn btn-for-cable" id="red-c"></div>
+    </div>
+    <!-- красный провод -->
+    <div class="red-cable hide-cable" id="red-cable-c"></div>
+    <!-- кнопки под черный провод -->
+    <div class="black-btn-container">
+      <div class="btn btn-for-cable" id="black-a"></div>
+      <div class="btn btn-for-cable" id="black-b"></div>
+      <div class="btn btn-for-cable" id="black-c"></div>
+    </div>
+    <!-- черный провод -->
+    <div class="black-cable hide-cable" id="black-cable-a"></div>
+    <div class="black-cable hide-cable" id="black-cable-b"></div>
+    <div class="black-cable hide-cable" id="black-cable-c"></div>
   </section>
   <script src="script.js"></script>
 </body>

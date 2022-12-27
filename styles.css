@@ -25,7 +25,6 @@ body {
 
 .background-img {
   width: 100%;
-
 }
 
 .btn {
@@ -174,6 +173,7 @@ body {
   position: absolute;
   top: 510px;
   left: 110px;
+  width: 60px;
 }
 
 #amper1 {
@@ -268,6 +268,10 @@ body {
   left: 50%;
 }
 
+.slide {
+  background-color: rgb(104, 99, 146);
+}
+
 #btn-one {
   top: 380px;
   left: 810px;
@@ -275,15 +279,132 @@ body {
 
 #btn-two {
   top: 380px;
-  left: 600px;
+  left: 580px;
   z-index: 99;
 }
 
 #btn-three {
   top: 340px;
-  left: 380px;
+  left: 460px;
 }
 
 .switch:active {
   transform: translateY(0.5px);
 }
+
+.name-under-ampermetr {
+  margin-top: 26px;
+  margin-left: 15px;
+  font-size: 25px;
+  color: rgb(102, 79, 79);
+}
+
+/* null btns */
+#la-null {
+  position: absolute;
+  top: 310px;
+  left: 365px;
+  z-index: 99;
+}
+
+#lb-null {
+  position: absolute;
+  top: 335px;
+  left: 365px;
+  z-index: 99;
+
+}
+
+#lc-null {
+  position: absolute;
+  top: 360px;
+  left: 365px;
+  z-index: 99;
+}
+
+.red-btn-container {
+  position: absolute;
+  left: 407px;
+  top: 365px;
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+.red-cable {
+  background-color: black;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px rgb(170, 44, 44), inset 0px -3px 1px 1px rgba(185, 78, 59, 0.5);
+  position: absolute;
+}
+
+#red-cable-a {
+  width: 320px;
+  height: 7px;
+  top: 405px;
+  left: 113px;
+  transform: rotate(-32deg);
+}
+#red-cable-b {
+  width: 310px;
+  height: 7px;
+  top: 420px;
+  left: 116px;
+  transform: rotate(-28deg);
+}
+#red-cable-c {
+  width: 300px;
+  height: 7px;
+  top: 434px;
+  left: 120px;
+  transform: rotate(-25deg);
+}
+
+.hide-cable {
+  opacity: 0;
+}
+
+.btn-for-cable {
+  height: 16px;
+  width: 10px;
+  border-radius: 30%;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.black-btn-container {
+  position: absolute;
+  left: 620px;
+  top: 340px;
+  display: grid;
+  grid-row-gap: 28px;
+}
+
+.black-cable {
+  background-color: black;
+  box-shadow: 0px 3px 5px 0px rgba(28, 28, 28, 0.3), inset 0px 4px 1px 1px rgb(41, 40, 40), inset 0px -3px 1px 1px rgba(50, 48, 48, 0.5);
+  position: absolute;
+}
+
+#black-cable-a {
+  width: 520px;
+  height: 7px;
+  top: 420px;
+  left: 113px;
+  transform: rotate(-17deg);
+}
+
+#black-cable-b {
+  width: 520px;
+  height: 7px;
+  top: 447px;
+  left: 113px;
+  transform: rotate(-12deg);
+}
+
+#black-cable-c {
+  width: 520px;
+  height: 7px;
+  top: 460px;
+  left: 111px;
+  transform: rotate(-7deg);
+}
+
